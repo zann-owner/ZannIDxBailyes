@@ -1,0 +1,27 @@
+const major = parseInt(
+    process.versions.node.split(".")[0],
+    10
+)
+
+if (major < 20) {
+    console.clear()
+
+    console.error(`
+███████╗ █████╗ ███╗   ██╗███╗   ██╗
+╚══███╔╝██╔══██╗████╗  ██║████╗  ██║
+  ███╔╝ ███████║██╔██╗ ██║██╔██╗ ██║
+ ███╔╝  ██╔══██║██║╚██╗██║██║╚██╗██║
+███████╗██║  ██║██║ ╚████║██║ ╚████║
+╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝
+
+⚡ ZannID Baileys
+
+Node.js Version : v${process.versions.node}
+Required Version: v20.0.0+
+
+Please upgrade your Node.js before using ZannID Baileys.
+https://nodejs.org
+`)
+
+    process.exit(1)
+}
